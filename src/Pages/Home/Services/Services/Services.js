@@ -13,6 +13,9 @@ const Services = () => {
             <div className="sticky-top">
             <NavBar></NavBar>
             </div>
+            <h1 className="text-center my-4">
+              Our best Houses for rent
+            </h1>
              <div className="mt-5 container">
              {
                 spinner && <div class="d-flex justify-content-center">

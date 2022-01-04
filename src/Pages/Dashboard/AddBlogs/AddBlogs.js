@@ -22,7 +22,7 @@ const AddBlogs = () => {
         formData.append('image', image);
         formData.append('postDate', currentDate);
 
-        fetch('https://lit-temple-88055.herokuapp.com/blogs', {
+        fetch('https://agile-atoll-48938.herokuapp.com/blogs', {
             method: 'POST',
             body: formData
         })

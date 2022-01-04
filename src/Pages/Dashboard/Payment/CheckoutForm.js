@@ -16,7 +16,7 @@ const CheckoutForm = ({ services }) => {
     const [clientSecret, setClientSecret] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://agile-atoll-48938.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -82,7 +82,7 @@ const CheckoutForm = ({ services }) => {
                 last4: paymentMethod.card.last4,
                 transaction: paymentIntent.client_secret.slice('_secret')[0]
             }
-            const url = `http://localhost:5000/services/${_id}`;
+            const url = `https://agile-atoll-48938.herokuapp.com/services/${_id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {

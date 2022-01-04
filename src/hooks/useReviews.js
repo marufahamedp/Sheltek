@@ -4,7 +4,7 @@ const useReviews = () => {
     const [reviews, setReview] = useState([])
     const [spinner, setSpinner] = useState(true);
     useEffect(()=>{
-      fetch(`http://localhost:5000/reviews`)
+      fetch(`https://agile-atoll-48938.herokuapp.com/reviews`)
       .then(res=>res.json())
       .then(data=>setReview(data))
       .finally(() => setSpinner(false));

@@ -4,7 +4,7 @@ const useOrders = () => {
     const [orders, setOrders] = useState([])
     const [spinner, setSpinner] = useState(true);
     useEffect(()=>{
-      fetch(`http://localhost:5000/orders`)
+      fetch(`https://agile-atoll-48938.herokuapp.com/orders`)
       .then(res=>res.json())
       .then(data=>setOrders(data))
       .finally(() => setSpinner(false));

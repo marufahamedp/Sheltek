@@ -3,21 +3,32 @@ import { Link } from 'react-router-dom';
 import SingleAgent from '../SingleAgent/SingleAgent';
 
 const Agent = () => {
-    const [agents, setAgents] = useState([]);
-
-    useEffect(() => {
-        try {
-            async function callApi() {
-                let data = await fetch('./agent.json');
-                data = await data.json();
-                data = data.slice(0, 4)
-                setAgents(data);
-            }
-            callApi();
-        } catch (error) {
-            console.log(error);
+    const agents = [
+        {
+            "id": "1",
+            "name": "Shah M Nawaz",
+            "title": "Real Estate Agent",
+            "image": "https://i.ibb.co/Zx4sPVt/Shah-MNawaz.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Eva Sharlin",
+            "title": "Real Estate Broker",
+            "image": "https://i.ibb.co/3p2wfTq/Eva-Sharlin.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Robin Patrick",
+            "title": "Real Estate Broker",
+            "image": "https://i.ibb.co/h2G8mLy/Robin-Patrick.jpg"
+        },
+        {
+            "id": "4",
+            "name": "Sarmin Tabassum",
+            "title": "Real Estate Agent",
+            "image": "https://i.ibb.co/Z21SqWT/Sarmin-Tabassum.jpg"
         }
-    }, [])
+    ]
     return (
         <div className="container my-5 text-center">
             <h3 className="mb-4">Our Agents</h3>

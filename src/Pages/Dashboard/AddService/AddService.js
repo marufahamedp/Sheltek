@@ -25,7 +25,7 @@ const AddService = () => {
         formData.append('price', price);
         formData.append('technology', technology);
 
-        fetch('https://lit-temple-88055.herokuapp.com/services', {
+        fetch('https://agile-atoll-48938.herokuapp.com/services', {
             method: 'POST',
             body: formData
         })

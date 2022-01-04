@@ -15,7 +15,7 @@ const Payment = () => {
     const { serviceID } = useParams();
     const [services, setservices] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceID}`)
+        fetch(`https://agile-atoll-48938.herokuapp.com/services/${serviceID}`)
             .then(res => res.json())
             .then(data => setservices(data));
     }, [serviceID]);

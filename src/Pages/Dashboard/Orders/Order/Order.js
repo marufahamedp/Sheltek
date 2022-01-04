@@ -6,7 +6,7 @@ const Order = ({order}) => {
     const { p_name, email, id,orderStatus, projectname, price, username, image, orderDate, _id, imageupload, location} = order;
     console.log(serviceID);
     const handelDelete = id => {
-        const url = `http://localhost:5000/orders${id}`
+        const url = `https://agile-atoll-48938.herokuapp.com/orders${id}`
             fetch(url, {
                 method: 'DELETE',
             })

@@ -21,7 +21,7 @@ const AddProjects = () => {
         formData.append('image', image);
         formData.append('postDate', currentDate);
 
-        fetch('https://lit-temple-88055.herokuapp.com/projects', {
+        fetch('https://agile-atoll-48938.herokuapp.com/projects', {
             method: 'POST',
             body: formData
         })

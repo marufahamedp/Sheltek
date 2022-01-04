@@ -6,7 +6,7 @@ const AddReview = () => {
     const { register, handleSubmit, reset } = useForm();
     const {user} = useAuth()
     const onSubmit = data => {
-        fetch('https://lit-temple-88055.herokuapp.com/reviews', {
+        fetch('https://agile-atoll-48938.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

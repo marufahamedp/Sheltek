@@ -10,7 +10,7 @@ const MakeAdmin = () => {
         const email = data.email ;
         const user ={ email }
 
-        fetch(`https://lit-temple-88055.herokuapp.com/users/admin`, {
+        fetch(`https://agile-atoll-48938.herokuapp.com/users/admin`, {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${token}`,

@@ -4,7 +4,7 @@ const useBlogs = () => {
     const [blogs, setBlogs] = useState([])
     const [spinner, setSpinner] = useState(true);
     useEffect(()=>{
-      fetch(`https://lit-temple-88055.herokuapp.com/blogs`)
+      fetch(`https://agile-atoll-48938.herokuapp.com/blogs`)
       .then(res=>res.json())
       .then(data=>setBlogs(data))
       .finally(() => setSpinner(false));

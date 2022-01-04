@@ -36,7 +36,7 @@ function GiveOnRent() {
         formData.append('postDate', currentDate);
         formData.append('Price', data.price);
         console.log(data);
-        fetch('http://localhost:5000/services', {
+        fetch('https://agile-atoll-48938.herokuapp.com/services', {
             method: 'POST',
             body: formData
         })

@@ -18,7 +18,7 @@ const ServiceDetails = () => {
   const [defaultValue, setDefaultValue] = useState({});
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = data => {
-    fetch('http://localhost:5000/orders', {
+    fetch('https://agile-atoll-48938.herokuapp.com/orders', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -57,7 +57,7 @@ const ServiceDetails = () => {
       profile: user.photoURL,
       reviewer: user.displayName
     }
-    fetch('http://localhost:5000/userreview', {
+    fetch('https://agile-atoll-48938.herokuapp.com/userreview', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -73,7 +73,7 @@ const ServiceDetails = () => {
   }
   const [userreviews, setUserreviews] = useState();
   useEffect(() => {
-    fetch(`http://localhost:5000/userreview/${_id}`)
+    fetch(`https://agile-atoll-48938.herokuapp.com/userreview/${_id}`)
       .then(res => res.json())
       .then(data => setUserreviews(data))
   }, [userreviews])
