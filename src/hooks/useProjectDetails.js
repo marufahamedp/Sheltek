@@ -6,7 +6,7 @@ const useProjectDetails = () => {
     const [projectDetails, setProjectDetails] = useState([])
     const [spinner, setSpinner] = useState(true);
     useEffect(()=>{
-      fetch(`https://lit-temple-88055.herokuapp.com/projects/${peojectID}`)
+      fetch(`http://localhost:5000/projects/${peojectID}`)
       .then(res=>res.json())
       .then(data=>setProjectDetails(data))
       .finally(() => setSpinner(false));

@@ -3,7 +3,7 @@ const useUsers = () => {
     const [users, setUsers] = useState([]);
     const [spinner, setSpinner] = useState(true);
     useEffect(()=>{
-      fetch(`https://lit-temple-88055.herokuapp.com/users`)
+      fetch(`http://localhost:5000/users`)
       .then(res=>res.json())
       .then(data=>setUsers(data))
       .finally(() => setSpinner(false));

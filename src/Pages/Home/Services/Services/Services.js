@@ -1,13 +1,18 @@
 import React from 'react';
 import useServices from '../../../../hooks/useServices';
+import Footer from '../../../Shared/Footer/Footer/Footer';
 import NavBar from '../../../Shared/Header/NavBar/NavBar';
+import TopHeader from '../../../Shared/Header/TopHeader/TopHeader';
 import Service from '../Service/Service';
 
 const Services = () => {
     const { services, spinner } = useServices()
     return (
         <div>
+         <TopHeader></TopHeader>
+            <div className="sticky-top">
             <NavBar></NavBar>
+            </div>
              <div className="mt-5 container">
              {
                 spinner && <div class="d-flex justify-content-center">
@@ -25,6 +30,7 @@ const Services = () => {
               }
             </div>
              </div>
+             <Footer></Footer>
         </div>
     );
 };

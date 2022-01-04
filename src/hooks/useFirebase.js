@@ -16,7 +16,7 @@ const useFirebase = () => {
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
-    const registerUser = (email, password, name, navigate) => {
+    const registerUser = (email, password, name, navigate, handleCloser) => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -25,6 +25,7 @@ const useFirebase = () => {
                 setUser(newUser);
                 // save user to the database
                 saveUser(email, name, 'POST');
+                handleCloser();
                 // send name to firebase after creation
                 updateProfile(auth.currentUser, {
                     displayName: name
@@ -40,13 +41,14 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
-    const loginUser = (email, password, location, navigate) => {
+    const loginUser = (email, password, location, navigate,handleClosel) => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const destination = location?.state?.from || '/';
                 navigate(destination);
                 setAuthError('');
+                handleClosel();
             })
             .catch((error) => {
                 setAuthError(error.message);
@@ -86,7 +88,7 @@ const useFirebase = () => {
     }, [auth])
 
     useEffect(() => {
-        fetch(`https://lit-temple-88055.herokuapp.com/users/${user.email}`)
+        fetch(`http://localhost:5000/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -103,7 +105,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('https://lit-temple-88055.herokuapp.com/users', {
+        fetch('http://localhost:5000/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

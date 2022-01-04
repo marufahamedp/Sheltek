@@ -2,10 +2,14 @@ import React from 'react';
 import Footer from '../../Shared/Footer/Footer/Footer';
 import NavBar from '../../Shared/Header/NavBar/NavBar';
 import code from '../../../images/maruf-hero.png';
+import TopHeader from '../../Shared/Header/TopHeader/TopHeader';
 const About = () => {
     return (
         <div>
+         <TopHeader></TopHeader>
+            <div className="sticky-top">
             <NavBar></NavBar>
+            </div>
            <div className="container">
            <h1 className="text-center">About US</h1>
             <div className="row">

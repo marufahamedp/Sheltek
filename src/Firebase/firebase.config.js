@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyD5kbZF2kRBSi_mI0I9U9zQQAzd5XNh1Vc",
-    authDomain: "developer-maruf.firebaseapp.com",
-    projectId: "developer-maruf",
-    storageBucket: "developer-maruf.appspot.com",
-    messagingSenderId: "998809235127",
-    appId: "1:998809235127:web:cd188c5b9337d179356732",
-    measurementId: "G-QKWXCB4TVZ"
+    apiKey: "AIzaSyDqdaSWA9c0lJ7jCyAebTFGAdEQJvKaMDk",
+  authDomain: "shelteck-a01a1.firebaseapp.com",
+  projectId: "shelteck-a01a1",
+  storageBucket: "shelteck-a01a1.appspot.com",
+  messagingSenderId: "596258766681",
+  appId: "1:596258766681:web:6550a1d31488b0ef549648",
+  measurementId: "G-DPBZ7YF1J2"
 };
 export default firebaseConfig;

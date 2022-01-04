@@ -31,6 +31,8 @@ import BlogsDetails from './Pages/Shared/BlogsDetails/BlogsDetails';
 import Orders from './Pages/Dashboard/Orders/Orders/Orders';
 import ManageAllOrders from './Pages/Dashboard/ManageAllOrders/ManageAllOrders/ManageAllOrders';
 import AdminRoute from './AdminRoute/AdminRoute';
+import GiveOnRent from './Pages/GiveOnRent/GiveOnRent';
+import Payment from './Pages/Dashboard/Payment/Payment';
 
 function App() {
   return (
@@ -40,14 +42,17 @@ function App() {
           <Routes>
             <Route path="/home" element={<Home />}>
             </Route>
+            <Route path="/payment/:serviceID" element={<Payment />}>
+            </Route>
+            <Route path="/giveonrent" element={<GiveOnRent />}>
+            </Route>
             <Route path="/" element={<Home />}>
             </Route>
             <Route path="/projects" element={<Projects />}>
             </Route>
             <Route path="/services" element={<Services />}>
             </Route>
-            <Route path="/projects/:peojectID" element={<ProjectDetails />}>
-            </Route>
+           
             <Route path="/services/:serviceID" element={<ServiceDetails />}>
             </Route>
             <Route path="/blogs" element={<Blogs />}>

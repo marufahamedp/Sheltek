@@ -3,13 +3,14 @@ import { useForm } from "react-hook-form";
 import useAuth from '../../../hooks/useAuth';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../../images/logo.png';
-const Register = () => {
+const Register = ({handleCloser}) => {
      const [loginData, setLoginData] = useState({});
     const navigate = useNavigate();
     const { user, registerUser, isLoading, authError } = useAuth();
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        registerUser(data.email, data.password, data.name, navigate);
+        registerUser(data.email, data.password, data.name, navigate, handleCloser);
+        
       };
     return (
         <div>
@@ -17,11 +18,12 @@ const Register = () => {
           <div className="text-center mt-lg-3">
           <img src={logo} alt="" />
           </div>
-          <h2 className="text-center fw-bolder my-lg-3">
-            Register {authError}
-          </h2>
-          <div className="row  d-flex justify-content-center">
-            <div className="col-lg-4">
+          <h3 className="text-center fw-bolder my-lg-3">
+          Register Now
+            {authError}
+          </h3>
+          <div className="  d-flex justify-content-center">
+            <div className="">
              <div className="a">
              <form onSubmit={handleSubmit(onSubmit)}>
                <label htmlFor="">Name : </label>

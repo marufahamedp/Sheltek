@@ -12,7 +12,7 @@ const Dashboard = () => {
       <div className="">
          {
              admin ?  <h1 className="text-center text-bg fw-bolder py-2">
-             CODEPICK JS ADMIN PANEL
+             Sheltek  ADMIN PANEL
           </h1> :  <h1 className="text-center text-bg fw-bolder py-2">
             Welcome To CodePick JS
           </h1>
@@ -32,21 +32,12 @@ const Dashboard = () => {
                     <Link className="text-decoration-none dashboard-menu p-2 d-block fs-5" to="/dashboard/addblog"><i class="fab fa-blogger"></i> Add Blog</Link>
                 </div>
                 <div className=" ">
-                    <Link className="text-decoration-none dashboard-menu p-2 d-block fs-5" to="/dashboard/manageteam"><i className="fas fa-users"></i> Manage Team</Link>
-                </div>
-                <div className=" ">
                     <Link className="text-decoration-none dashboard-menu p-2 d-block fs-5" to="/dashboard/addprojects"><i className="fas fa-plus-square"></i> Add Project</Link>
                 </div>
                 <div className=" ">
                     <Link className="text-decoration-none dashboard-menu p-2 d-block fs-5" to="/dashboard/addservice"><i className="fas fa-plus-circle"></i> Add Service</Link>
                 </div>
              
-                <div className=" ">
-                    <Link className="text-decoration-none dashboard-menu p-2 d-block fs-5" to="/dashboard/manageservices"><i className="fas fa-briefcase"></i> M. Service</Link>
-                </div>
-                <div className=" ">
-                    <Link className="text-decoration-none dashboard-menu p-2 d-block fs-5" to="/dashboard/manageprojects"><i className="fas fa-pager"></i> M. Projects</Link>
-                </div>
                     </div>
                 }
                 <div className=" ">
@@ -60,11 +51,7 @@ const Dashboard = () => {
                 <div className=" ">
                     <Link className="text-decoration-none dashboard-menu p-2 d-block fs-5" to="/dashboard/addreview"><i class="fas fa-star"></i> Add Review</Link>
                 </div>
-                {
-                    admin && <div className=" ">
-                    <Link className="text-decoration-none dashboard-menu p-2 d-block fs-5" to="/dashboard/managereviews"><i className="fas fa-star"></i> Reviews</Link>
-                </div>
-                }
+             
                 <div className=" ">
                     <Link className="text-decoration-none dashboard-menu p-2 d-block fs-5" to="/home"><i className="fas fa-home"></i> Home</Link>
                 </div>

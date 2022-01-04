@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 const Order = ({order}) => {
-    const {username, email, projectname, orderStatus, image, price, _id} = order;
-    console.log(order);
+    const {serviceID} = useParams()
+    const { p_name, email, id,orderStatus, projectname, price, username, image, orderDate, _id, imageupload, location} = order;
+    console.log(serviceID);
     const handelDelete = id => {
-        const url = `https://lit-temple-88055.herokuapp.com/orders/${id}`
+        const url = `http://localhost:5000/orders${id}`
             fetch(url, {
                 method: 'DELETE',
             })
@@ -20,7 +22,9 @@ const Order = ({order}) => {
             <div class="card mb-3 text-dark">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src={`data:image/png;base64,${image}`}  class="img-fluid rounded-start w-100 h-100" alt="..." />
+                       {
+                           imageupload == null ?  <img src={image} class="img-fluid rounded-start w-100 h-100" alt="..." />: <img src={`data:image/png;base64,${imageupload}`}  class="img-fluid rounded-start w-100 h-100" alt="..." />
+                       }
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -30,6 +34,8 @@ const Order = ({order}) => {
                             <p className='p-0 m-0'>Order By: {email}</p>
                             <p class="card-text">Order Status : <span className='text-danger'>{orderStatus}</span></p>
                             <button onClick={() => handelDelete(_id)} className='codepickjs-btn'>Cancle Order</button>
+                            <Link to={`/payment/${serviceID}`}>
+                                    <button className='codepickjs-btn'>Place Order</button></Link>
                         </div>
                     </div>
                 </div>

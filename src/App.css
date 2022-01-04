@@ -221,13 +221,12 @@ ifram{
   
   .btn-f {
     border: 2px solid black;
-    color: rgb(0, 0, 0);
-    background-color: #FFE222;
+    color: rgb(255, 255, 255);
+    background-color: #1F223C;
     padding: 8px 20px;
     border-radius: 8px;
     font-size: 20px;
     font-weight: bold;
-
   }
   
   .upload-btn-wrapper input[type=file] {

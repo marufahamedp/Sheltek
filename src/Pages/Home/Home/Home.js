@@ -22,10 +22,6 @@ const Home = () => {
             <HomeAboutSection></HomeAboutSection>
             <h1 className="text-center fw-bold mb-5">OUR Services</h1>
             <HomeServices></HomeServices>
-            <h1 className="text-center fw-bold mt-5">OUR PROJECTS</h1>
-            <HomeProjects></HomeProjects>
-            <h1 className="text-center fw-bold mt-5">OUR BLOGS</h1>
-            <HomeBlogs></HomeBlogs>
             <h1 className="text-center fw-bold mt-5">OUR Reviews</h1>
             <Reviews></Reviews>
             <Footer></Footer>

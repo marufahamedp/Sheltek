@@ -4,7 +4,7 @@ const useOrders = () => {
     const [orders, setOrders] = useState([])
     const [spinner, setSpinner] = useState(true);
     useEffect(()=>{
-      fetch(`https://lit-temple-88055.herokuapp.com/orders`)
+      fetch(`http://localhost:5000/orders`)
       .then(res=>res.json())
       .then(data=>setOrders(data))
       .finally(() => setSpinner(false));

@@ -4,7 +4,7 @@ const useServices = () => {
     const [services, setServices] = useState([])
     const [spinner, setSpinner] = useState(true);
     useEffect(()=>{
-      fetch(`https://lit-temple-88055.herokuapp.com/services`)
+      fetch(`http://localhost:5000/services`)
       .then(res=>res.json())
       .then(data=>setServices(data))
       .finally(() => setSpinner(false));

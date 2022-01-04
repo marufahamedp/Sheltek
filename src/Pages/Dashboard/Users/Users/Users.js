@@ -13,7 +13,7 @@ const Users = () => {
                 </div>
               </div>
             }
-             <table className="table text-light">
+             <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">User ID</th>

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "herorider",
+    "site": "sheltek",
     "public": "build",
     "ignore": [
       "firebase.json",

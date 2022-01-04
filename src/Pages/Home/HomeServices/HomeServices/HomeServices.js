@@ -4,6 +4,7 @@ import HomeService from '../HomeService/HomeService';
 
 const HomeServices = () => {
     const { services, spinner } = useServices()
+    const cutservices = services.slice(0,6)
     return (
         <div className='container'>
               {
@@ -15,7 +16,7 @@ const HomeServices = () => {
             }
               <div className="row row-cols-1 row-cols-md-3 g-4">
               {
-                  services.map(service => <HomeService
+                  cutservices.map(service => <HomeService
                   key={service._id}
                   service={service}
                   ></HomeService>)

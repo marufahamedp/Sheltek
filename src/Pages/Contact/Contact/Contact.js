@@ -4,6 +4,7 @@ import{ init } from 'emailjs-com';
 import Footer from '../../Shared/Footer/Footer/Footer';
 import NavBar from '../../Shared/Header/NavBar/NavBar';
 import code from '../../../images/maruf-hero.png';
+import TopHeader from '../../Shared/Header/TopHeader/TopHeader';
 init("user_ZcmjbMUxGCv0CvbvMW2x7");
 
 const Contact = () => {
@@ -21,8 +22,11 @@ const Contact = () => {
     };
     return (
         <div>
+            <TopHeader></TopHeader>
+            <div className="sticky-top">
             <NavBar></NavBar>
-            <div className="container text-light"> 
+            </div>
+            <div className="container"> 
 
           <div className="row mt-5">
               <div className="col-lg-6 ">

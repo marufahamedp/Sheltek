@@ -2,13 +2,19 @@ import React from 'react';
 import useBlogs from '../../../hooks/useBlogs';
 import Footer from '../../Shared/Footer/Footer/Footer';
 import NavBar from '../../Shared/Header/NavBar/NavBar';
+import TopHeader from '../../Shared/Header/TopHeader/TopHeader';
 import Blog from '../Blog/Blog';
 
 const Blogs = () => {
     const { blogs, spinner } = useBlogs();
     return (
-        <div className='container'>
+       <div className="A">
+           <TopHeader></TopHeader>
+            <div className="sticky-top">
             <NavBar></NavBar>
+            </div>
+            <div className='container'>
+            
             <div className="row my-5">
                 <div className="col-lg-8">
                 {
@@ -34,8 +40,10 @@ const Blogs = () => {
 
                 </div>
             </div>
-            <Footer></Footer>
+            
         </div>
+        <Footer></Footer>
+       </div>
     );
 };
 
