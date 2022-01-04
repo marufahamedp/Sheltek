@@ -14,7 +14,7 @@ const Dashboard = () => {
              admin ?  <h1 className="text-center text-bg fw-bolder py-2">
              Sheltek  ADMIN PANEL
           </h1> :  <h1 className="text-center text-bg fw-bolder py-2">
-            Welcome To CodePick JS
+            Welcome To Sheltek
           </h1>
          }
      <div className="d-none d-md-block">

@@ -1,59 +1,60 @@
-import React, { useRef } from 'react';
-import emailjs from 'emailjs-com';
-import{ init } from 'emailjs-com';
+import React from 'react';
+import './Contact.css';
+// import { init } from 'emailjs-com';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faGithub, faLinkedin, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import MyForm from '../MyForm/MyForm';
+import { faEnvelope, faMapMarkerAlt, faPaperPlane, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../../Shared/Footer/Footer/Footer';
 import NavBar from '../../Shared/Header/NavBar/NavBar';
-import code from '../../../images/maruf-hero.png';
 import TopHeader from '../../Shared/Header/TopHeader/TopHeader';
-init("user_ZcmjbMUxGCv0CvbvMW2x7");
 
 const Contact = () => {
-    const form = useRef();
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        emailjs.sendForm('service_milkijf', 'template_cbi6r5b', form.current, 'user_ZcmjbMUxGCv0CvbvMW2x7')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-    };
     return (
+        
         <div>
             <TopHeader></TopHeader>
-            <div className="sticky-top">
             <NavBar></NavBar>
-            </div>
-            <div className="container"> 
+            <div className="container">
+                
+                <div className="pb-5 pt-3">
+                    <h3>
+                    <span className="pb-2 my-border-bottom">
+                                <FontAwesomeIcon icon={faPaperPlane} /> Contact Us
+                            </span>
+                    </h3>
+                </div>
 
-          <div className="row mt-5">
-              <div className="col-lg-6 ">
-             <div className="">
-             <div >
-           <h4 className="my-3">Contact Me</h4>
-           <form ref={form} onSubmit={sendEmail}>
-                <label className="form-label">Name</label>
-                <input  className="form-control" type="text" name="user_name" />
-                <label className="form-label" >Email</label>
-                <input  className="form-control" type="email" name="user_email" />
-                <label className="form-label" >Message</label>
-                <textarea className="form-control" cols="30" name="message" />
-            <div className="text-end">
-            <button className="my-3 btn codepickjs-btn" type="submit">SEND MESSAGE</button>
+                <div className="row bg-contact">
+                    <div className="col-md-6">
+                        <p className="mb-3 fw-bold">Please send your text here</p>
+                        <MyForm></MyForm>
+                    </div>
+                    <div className="col-md-6">
+                        <p className="fw-bold">You also find us</p>
+                        <hr />
+
+                        <div className="mt-4 ">
+                            <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Dhaka, Bangladesh.</p>
+                            <p><FontAwesomeIcon icon={faPhoneAlt} /> +880170000000</p>
+                            <p><FontAwesomeIcon icon={faEnvelope} /> sheltek@gmail.com</p>
+
+                            <p>
+                                <a href=" " rel="noreferrer" target="_blank" className="btn btn-facebook me-2 ">
+                                    <FontAwesomeIcon icon={faFacebook} /> Facebook
+                                </a>
+                                <a href=" " rel="noreferrer" target="_blank" className="btn btn-whatsapp me-2">
+                                    <FontAwesomeIcon icon={faWhatsapp} /> Whatsapp
+                                </a>
+                                <a href=" " rel="noreferrer" target="_blank" className="btn btn-twitter me-2">
+                                    <FontAwesomeIcon icon={faTwitter} /> Twitter
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-              
-            </form>
-           </div>
-             </div>
-              </div>
-              <div className="col-lg-6">
-                <img className='w-100' src={code} alt="" />
-              </div>
-          </div>
-       
-        </div>
             <Footer></Footer>
         </div>
     );
